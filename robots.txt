@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cursoisraelrodrigues.com.br/sitemap.xml
