@@ -7,19 +7,18 @@
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
 
-  <title>Guitarrista Ninja — Israel Rodrigues | Curso completo de violão e guitarra</title>
+  <title>Guitarrista Ninja — Israel Rodrigues | Curso completo de guitarra</title>
   <meta name="description" content="Do zero ao avançado em 12 meses. 10 módulos + bônus secreto com Israel Rodrigues, um dos maiores guitarristas do Brasil. 100% online, no seu ritmo.">
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="Guitarrista Ninja — Israel Rodrigues">
-  <meta property="og:description" content="Domine violão e guitarra em 12 meses. Curso 100% online.">
+  <meta property="og:description" content="Domine guitarra em 12 meses. Curso 100% online.">
   <meta property="og:image" content="/assets/israel.jpg">
   <meta property="og:url" content="https://cursoisraelrodrigues.com.br/">
   <meta property="og:locale" content="pt_BR">
 
   <link rel="canonical" href="https://cursoisraelrodrigues.com.br/">
-  <link rel="icon" type="image/png" href="/assets/logo.png">
-  <link rel="apple-touch-icon" href="/assets/logo.png">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%238B5CF6%22/><text x=%2250%22 y=%2270%22 font-size=%2260%22 text-anchor=%22middle%22 fill=%22white%22>🎸</text></svg>">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -98,6 +97,22 @@ section{padding:80px 0;position:relative}
 .header__inner{display:flex;align-items:center;justify-content:space-between;padding-top:14px;padding-bottom:14px}
 .header__logo{height:38px;width:auto}
 .header__cta{display:inline-flex;align-items:center;gap:8px}
+
+/* BRAND TEXT (usado no header, hero mobile e footer) */
+.brand-text{display:inline-flex;align-items:center;gap:10px;font-family:var(--font-display);text-decoration:none;color:var(--text)}
+.brand-text__mark{
+  display:inline-grid;place-items:center;
+  width:34px;height:34px;
+  background:linear-gradient(135deg,var(--primary),#c084fc);
+  border-radius:10px;font-size:18px;
+  box-shadow:0 4px 12px -2px var(--primary-glow);
+}
+.brand-text__name{
+  font-weight:800;font-size:.95rem;
+  letter-spacing:.14em;
+  color:var(--text);
+}
+.footer__brand{justify-content:center;margin:0 auto 18px}
 
 /* HERO */
 .hero{padding:60px 0 90px;position:relative;background:radial-gradient(ellipse 80% 50% at 50% -10%,rgba(139,92,246,.2),transparent 70%),var(--bg)}
@@ -248,8 +263,9 @@ section{padding:80px 0;position:relative}
   .header{display:none}
   .hero{padding:22px 0 52px}
   .hero__inner{display:flex !important;flex-direction:column;gap:18px;align-items:stretch}
-  .hero__brand{display:block;order:-10;margin:0 auto 4px}
-  .hero__brand img{height:30px}
+  .hero__brand{display:inline-flex !important;order:-10;margin:0 auto 4px;justify-content:center}
+  .hero__brand .brand-text__mark{width:30px;height:30px;font-size:16px}
+  .hero__brand .brand-text__name{font-size:.82rem}
   .hero__eyebrow{order:-9;align-self:center;font-size:.78rem;padding:5px 12px;margin-bottom:0}
   .hero h1{order:-8;font-size:1.9rem;margin-bottom:2px;text-align:center}
   .hero__video{order:-7;max-width:100%;margin:4px 0;border-radius:var(--radius)}
@@ -297,8 +313,9 @@ section[id]{scroll-margin-top:80px}
   <!-- HEADER -->
   <header class="header">
     <div class="container header__inner">
-      <a href="#" aria-label="Israel Rodrigues">
-        <img class="header__logo" src="/assets/logo.png" alt="Israel Rodrigues" width="130" height="38">
+      <a href="#" class="brand-text" aria-label="Israel Rodrigues">
+        <span class="brand-text__mark">🎸</span>
+        <span class="brand-text__name">ISRAEL RODRIGUES</span>
       </a>
       <a href="#planos" class="btn btn--primary header__cta">Quero entrar</a>
     </div>
@@ -309,13 +326,14 @@ section[id]{scroll-margin-top:80px}
   <!-- HERO -->
   <section class="hero">
     <div class="container hero__inner">
-      <a class="hero__brand" href="#" aria-label="Israel Rodrigues">
-        <img src="/assets/logo.png" alt="Israel Rodrigues" width="115" height="30">
+      <a class="hero__brand brand-text" href="#" aria-label="Israel Rodrigues">
+        <span class="brand-text__mark">🎸</span>
+        <span class="brand-text__name">ISRAEL RODRIGUES</span>
       </a>
       <div class="hero__copy">
         <span class="hero__eyebrow"><span class="dot"></span> Método Guitarrista Ninja — vagas abertas</span>
-        <h1>Finalmente você pode <em class="text-grad">dominar violão e guitarra</em> de um jeito simples e objetivo.</h1>
-        <p class="hero__lead">Curso 100% online com conteúdos práticos e diretos, no violão E na guitarra. Ideal pra quem já toca e quer melhorar, e também pra quem tá começando do absoluto zero.</p>
+        <h1>Finalmente você pode <em class="text-grad">dominar a guitarra</em> de um jeito simples e objetivo.</h1>
+        <p class="hero__lead">Curso <strong>100% online</strong> com conteúdos práticos e diretos pra desenvolver suas habilidades na guitarra. Ideal pra quem já toca e quer evoluir, e também pra quem tá começando do absoluto zero.</p>
 
         <div class="hero__ctas">
           <a href="#planos" class="btn btn--primary btn--lg">Quero garantir minha vaga</a>
@@ -468,8 +486,8 @@ section[id]{scroll-margin-top:80px}
         <p class="plano__desc">Acesso completo ao método, todos os 10 módulos + bônus secreto + comunidade no Facebook.</p>
         <div class="plano__preco">
           <span class="plano__de">De R$ 497,00</span>
-          <div class="plano__por">12x R$ 25<span class="cents">,90</span> <span class="periodo">no cartão</span></div>
-          <div class="plano__obs">ou R$ 310,80 à vista (Pix / boleto — com desconto)</div>
+          <div class="plano__por">12x R$ 25<span class="cents">,85</span> <span class="periodo">no cartão</span></div>
+          <div class="plano__obs">ou R$ 310,20 à vista (Pix / boleto — com desconto)</div>
         </div>
         <ul class="plano__features">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>10 módulos completos (fundamentos → improvisação modal)</li>
@@ -508,7 +526,7 @@ section[id]{scroll-margin-top:80px}
         </details>
         <details class="faq-item">
           <summary>Quais são as formas de pagamento?</summary>
-          <p>Você pode parcelar em até <strong>12x de R$ 25,90</strong> no cartão de crédito. O valor à vista sai com desconto (Pix ou boleto). Tudo pela Hotmart, 100% seguro.</p>
+          <p>Você pode parcelar em até <strong>12x de R$ 25,85</strong> no cartão de crédito. O valor à vista sai com desconto (Pix ou boleto). Tudo pela Hotmart, 100% seguro.</p>
         </details>
         <details class="faq-item">
           <summary>Terei suporte pra tirar dúvidas?</summary>
@@ -546,7 +564,10 @@ section[id]{scroll-margin-top:80px}
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
-      <img class="footer__logo" src="/assets/logo.png" alt="Israel Rodrigues">
+      <div class="footer__brand brand-text">
+        <span class="brand-text__mark">🎸</span>
+        <span class="brand-text__name">ISRAEL RODRIGUES</span>
+      </div>
       <nav class="footer__nav">
         <a href="#modulos">Módulos</a>
         <a href="#planos">Investimento</a>
@@ -559,7 +580,7 @@ section[id]{scroll-margin-top:80px}
   <!-- MOBILE CTA STICKY -->
   <div class="mobile-cta">
     <div class="mobile-cta__info">
-      <span class="mobile-cta__price">12x R$ 25,90</span>
+      <span class="mobile-cta__price">12x R$ 25,85</span>
       <span class="mobile-cta__label">Guitarrista Ninja · 12 meses</span>
     </div>
     <a href="https://pay.hotmart.com/M8450647K?off=mvw19pn8&checkoutMode=10&split=12" class="btn btn--primary" rel="noopener">Quero!</a>
