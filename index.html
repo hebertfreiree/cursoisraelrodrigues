@@ -199,7 +199,7 @@ section{padding:80px 0;position:relative}
 .plano{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px 30px;position:relative;display:flex;flex-direction:column;max-width:560px;margin:0 auto;transition:transform .25s ease}
 .plano:hover{transform:translateY(-4px)}
 .plano--destaque{border-color:var(--primary);background:linear-gradient(180deg,rgba(139,92,246,.07),var(--surface));box-shadow:0 30px 60px -20px rgba(139,92,246,.3)}
-.plano__badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--primary);color:white;padding:6px 16px;border-radius:999px;font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.plano__badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--primary);color:white;padding:6px 16px;border-radius:999px;font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;max-width:calc(100% - 32px);text-align:center}
 .plano__nome{font-family:var(--font-display);font-size:1.6rem;font-weight:700;margin-bottom:6px}
 .plano__desc{color:var(--text-mute);margin-bottom:24px;font-size:1rem}
 .plano__preco{margin:8px 0 24px}
@@ -306,6 +306,12 @@ section{padding:80px 0;position:relative}
 :focus-visible{outline:2px solid var(--primary);outline-offset:3px;border-radius:4px}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none !important;transition:none !important}html{scroll-behavior:auto}}
 section[id]{scroll-margin-top:80px}
+
+/* Fix badge vaga garantida no mobile */
+@media(max-width:400px){
+  .plano__badge{font-size:.66rem !important;padding:5px 12px !important;letter-spacing:.05em !important}
+}
+
 </style>
 </head>
 <body>
@@ -487,7 +493,7 @@ section[id]{scroll-margin-top:80px}
         <div class="plano__preco">
           <span class="plano__de">De R$ 497,00</span>
           <div class="plano__por">12x R$ 25<span class="cents">,85</span> <span class="periodo">no cartão</span></div>
-          <div class="plano__obs">ou R$ 310,20 à vista (Pix / boleto — com desconto)</div>
+          <div class="plano__obs">ou R$ 249,00 à vista (Pix / boleto — com desconto)</div>
         </div>
         <ul class="plano__features">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>10 módulos completos (fundamentos → improvisação modal)</li>
