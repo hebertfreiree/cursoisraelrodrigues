@@ -312,6 +312,21 @@ section[id]{scroll-margin-top:80px}
   .plano__badge{font-size:.66rem !important;padding:5px 12px !important;letter-spacing:.05em !important}
 }
 
+
+/* Fix: headline ACIMA do vídeo no mobile (order flex) */
+@media(max-width:768px){
+  .hero__inner{display:flex !important;flex-direction:column !important;gap:16px !important}
+  .hero__copy{order:1 !important;display:contents !important}
+  .hero__eyebrow{order:1 !important;align-self:center;margin-bottom:2px}
+  .hero h1{order:2 !important;text-align:center;font-size:1.75rem !important;line-height:1.15 !important;margin-bottom:6px !important}
+  .hero__video{order:3 !important;max-width:100% !important;margin:6px 0 !important;border-radius:14px !important}
+  .hero__lead{order:4 !important;font-size:1rem !important;text-align:center;margin-bottom:6px !important}
+  .hero__ctas{order:5 !important;flex-direction:column !important;gap:10px}
+  .hero__ctas .btn{width:100%}
+  .hero__proof{order:6 !important;font-size:.85rem !important;justify-content:center;flex-wrap:wrap}
+  .hero__brand-mobile{order:0 !important;align-self:center;margin-bottom:2px}
+}
+
 </style>
 </head>
 <body>
